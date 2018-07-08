@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Tecnologias do Futuro</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="css/form.css"/>
+	</head>
+
+<script type="text/javascript" src="javascript/funcoes.js"></script>
+<script type="text/javascript">
+    function calc_total() {
+        var qtd = parseInt(document.getElementById('cQtd').value);
+        tot = qtd * 1500;
+        document.getElementById('cTot').value = tot;
+    }
+</script>
+<body>
+<div id="interface"> 
+<header id="cabecalho">
+	<figure>
+	<img id="icone" src="imagens/contato.png"/>
+	</figure>
+	<hgroup>
+		<br>
+	<h1>10 avanços da tecnologia para ficar de olho <br> em 2018</h1>
+	<h2>De computação quântica a embriões artificiais, veja o que podemos esperar <br> pela frente</h2>
+	</hgroup>
+
+	<nav id="menu" onmouseout="mudaIcone('imagens/contato.png')">
+<h1>Menu Principal</h1>
+<ul>
+<li onmouseover="mudaIcone('imagens/home.png')"><a href="index.html" target="_self">Home</a></li>
+<li onmouseover="mudaIcone('imagens/fotos.png')"><a href="fotos.html">Fotos</a></li>
+<li onmouseover="mudaIcone('imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+<li onmouseover="mudaIcone('imagens/contato.png')"><a href="faleconosco.html">Contato</a></li>
+</ul>
+</nav>
+</header>
+
+<form method="post" id="fContato" action="mailto:ali_awada@hotmail.com" oninput="calc_total();">
+  <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+            <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+            <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha"/ size="8" maxlength="8" placeholder="8 digitos"></p>
+            <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20" maxlenght="40"/></p>
+            <fieldset id="sexo"><legend>Sexo</legend>
+                    <input type="radio" name="tSexo" id="cMasc" checked/><label for="cMasc">Masculino</label><br/>
+                    <input type="radio" name="tSexo" id="cFem"/><label for="cFem">Feminino</label></fieldset>
+            <p><label for="cNasc">Data de Nascimento:</label><input type="date" name="tNasc" id="cNasc"/></p>
+            </fieldset>
+    
+    <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+            <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="13" maxlenght="80" placeholder="Rua, Av, Trav, ..."/></p>
+            <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
+            <p><label for="cEst">Estado:</label>
+            <select name="tEst" id="cEst">
+                <optgroup label="Região Sudeste">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option>São Paulo</option>
+                    <option>Minas Gerais</option>
+                </optgroup>
+                
+                <optgroup label="Região Sul">
+                    <option>Paraná</option>
+                    <option>Santa Catarina</option>
+                    <option>Rio Grande do Sul</option>
+                </optgroup>
+        </select></p>
+            <p><label for="cCid">Cidade:</label>
+            <input type="text" name="tCid" id="cCid" maxlenght="40" size="20" placeholder="Nome da cidade" list="cidades"/></p>
+            <datalist id="cidades">
+                <option value="Rio de Janeiro"></option>
+                <option value="Nova Iguaçu"></option>
+                <option value="Niterói"></option>
+                <option value="Belford Roxo"></option>
+            </datalist>    
+        </fieldset>
+    
+    <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+            <p><label for="cUrg">Grau de Urgência:</label>
+            Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Máx</p>
+            <p><label for="cMsg">Mensagem:</label>
+                <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                <p><input type="checkbox" name="tPed" id="cPed" checked>
+                <label for="cPed">Gostaria de receber e-mails sobre novas matérias?</label></p>
+            </fieldset>
+
+    <fieldset id="pedido"><legend>Outras opções para formulário</legend>
+        <p><label for="cCol">Cor: <input type="color" name="tCol" id="cCol" value="#000000"></label></p>
+        <p><label for="cQtd">Quantidade: <input type="number" name="tQtd" id="cQtd" min="0" max="5" ></label></p>
+        <p>Preço Total: R$<input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p>
+    </fieldset>    
+
+            <input type="image" name="tEnviar" src="imagens/botao-enviar.png"/>
+    </form>
+
+    </article>
+    </section>
+
+
+
+<footer id="rodape">
+<p>	
+Copyright 2018&copy; - by Ali Abdallah Awada <br>
+<a href="https://www.facebook.com/ali.awada.58173" target="_blank">Facebook</a> |
+<a href="https://www.instagram.com/awadinhaa/?hl=en" target="_blank">Instagram</a>
+</p>
+</footer>
+</div>
+</body>
+</html>
